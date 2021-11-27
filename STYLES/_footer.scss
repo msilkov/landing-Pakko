@@ -1,0 +1,106 @@
+.footer {
+  background-color: #f8f8f9;
+  padding-top: 56px;
+  padding-bottom: 58px;
+  @media screen and (max-width: 768px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  @media screen and (max-width: 360px) {
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    @media screen and (max-width: 768px) {
+      justify-content: space-between;
+    }
+    @media screen and (max-width: 360px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  @media screen and (max-width: 360px) {
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-logo {
+    margin-bottom: 24px;
+  }
+  .footer-tagline {
+    max-width: 212px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.18px;
+    color: $light;
+    margin-bottom: 28px;
+    @media screen and (max-width: 768px) {
+      max-width: 150px;
+    }
+    @media screen and (max-width: 360px) {
+      text-align: center;
+    }
+  }
+  .social-link {
+    margin-right: 19px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+.footer-right {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: 132px;
+  @media screen and (max-width: 768px) {
+    justify-content: space-between;
+    margin-left: 80px;
+  }
+  @media screen and (max-width: 360px) {
+    display: none;
+  }
+  .footer-col {
+    &-02 {
+      margin-left: 146px;
+      @media screen and (max-width: 768px) {
+        margin-left: 0;
+      }
+      @media screen and (max-width: 360px) {
+      }
+    }
+    &-03 {
+      margin-left: 141px;
+      @media screen and (max-width: 768px) {
+        margin-left: 0;
+      }
+      @media screen and (max-width: 360px) {
+      }
+    }
+    &-title {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 13px;
+    }
+    &-list {
+      list-style: none;
+
+      &__item {
+        margin-bottom: 12px;
+        a {
+          font-weight: 400;
+          font-size: 15px;
+          color: $light;
+        }
+      }
+    }
+  }
+}

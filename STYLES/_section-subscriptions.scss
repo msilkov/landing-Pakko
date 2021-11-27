@@ -1,0 +1,201 @@
+.subscriptions {
+  padding-top: 168px;
+  padding-bottom: 86px;
+  @media screen and (max-width: 1024px) {
+    padding-top: 115px;
+  }
+  @media screen and (max-width: 768px) {
+    padding-bottom: 20px;
+  }
+  @media screen and (max-width: 360px) {
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
+    text-align: center;
+    margin-top: 46px;
+    margin-bottom: 60px;
+    max-width: 590px;
+    margin-left: auto;
+    margin-right: auto;
+    @media screen and (max-width: 768px) {
+      font-size: 35px;
+    }
+    @media screen and (max-width: 360px) {
+      margin-top: 60px;
+      margin-bottom: 40px;
+    }
+  }
+}
+.tarif {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  @media screen and (max-width: 360px) {
+    flex-direction: column;
+  }
+  &-item {
+    flex: 0 0 32%;
+    max-width: 395px;
+    transition: box-shadow 0.3s;
+    border-radius: 8px;
+    margin-bottom: 0;
+    @media screen and (max-width: 360px) {
+      margin-bottom: 20px;
+    }
+
+    &:hover {
+      box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+    }
+    &-free {
+      .tarif-header {
+        background-image: url(../IMG/free-bg-1.png);
+      }
+      .tarif-footer {
+        background-color: rgba(16, 10, 48, 0.03);
+      }
+      .tarif-list__item {
+        &::before {
+          background-image: url(../IMG/ICONS/check-free.svg);
+        }
+      }
+      .tarif-info__price {
+        color: transparent;
+      }
+    }
+    &-base {
+      .tarif-header {
+        background-image: url(../IMG/base-bg-1.svg);
+      }
+      .tarif-footer {
+        background-color: rgba(25, 199, 135, 0.05);
+      }
+      .tarif-list__item {
+        &::before {
+          background-image: url(../IMG/ICONS/check-base.svg);
+        }
+      }
+      .tarif-info__title {
+        color: #19c787;
+      }
+    }
+    &-pro {
+      .tarif-header {
+        background-image: url(../IMG/pro-bg-1.svg);
+      }
+      .tarif-footer {
+        background-color: rgba(252, 185, 52, 0.05);
+      }
+      .tarif-list__item {
+        &::before {
+          background-image: url(../IMG/ICONS/check-pro.svg);
+        }
+      }
+      .tarif-info__title {
+        color: #ff9f1c;
+      }
+    }
+  }
+  &-header {
+    border-radius: 8px 8px 0px 0px;
+    padding-top: 118px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @media screen and (max-width: 768px) {
+      padding-top: 100px;
+    }
+    @media screen and (max-width: 360px) {
+    }
+  }
+  &-info {
+    background-color: $darkpurp;
+    color: $white;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 40px 30px 37px;
+    @media screen and (max-width: 768px) {
+      padding: 20px 15px;
+    }
+    @media screen and (max-width: 360px) {
+    }
+    &__title {
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 24px;
+      @media screen and (max-width: 768px) {
+        font-size: 18px;
+      }
+      @media screen and (max-width: 360px) {
+        /* specific CSS */
+      }
+
+      &::before {
+        content: "";
+        display: block;
+        background-image: url(../IMG/logo-white.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 61px;
+        height: 16px;
+        margin-bottom: 13px;
+      }
+    }
+    &__price {
+      font-weight: 400;
+      font-size: 48px;
+      line-height: 30px;
+      margin-right: 6px;
+      span {
+        font-size: 15px;
+        line-height: 6px;
+        margin-left: 7px;
+      }
+      @media screen and (max-width: 768px) {
+        font-size: 30px;
+      }
+      @media screen and (max-width: 360px) {
+        /* specific CSS */
+      }
+    }
+  }
+  &-footer {
+    border-radius: 0px 0px 8px 8px;
+    padding: 26px 26px 9px 26px;
+    @media screen and (max-width: 1024px) {
+      min-height: 160px;
+    }
+    @media screen and (max-width: 768px) {
+      min-height: 180px;
+    }
+    @media screen and (max-width: 360px) {
+    }
+  }
+  &-list {
+    list-style: none;
+    &__item {
+      position: relative;
+      padding-left: 30px;
+      margin-bottom: 16px;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 22px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &::before {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: calc(50% - 10px);
+        left: 0;
+      }
+    }
+  }
+}
